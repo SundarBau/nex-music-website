@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090c10">
+  <meta name="description" content="Nex Music — a clean workspace for supported media tools.">
+  <title>Nex Music — Media Workspace</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Nex Music home">
+      <span class="brand-mark">N</span><span>NEX<span class="brand-light">MUSIC</span></span>
+    </a>
+    <nav><a href="#tools">Tools</a><a href="#about">About</a></nav>
+    <a class="top-cta" href="#tools">Get started <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> YOUR MEDIA WORKSPACE</div>
+      <h1>Soundtrack your<br><span>own world.</span></h1>
+      <p class="hero-copy">A simple, modern space to explore media information<br class="desktop-only"> and supported audio & video workflows.</p>
+
+      <section class="url-panel" id="tools" aria-label="Video information tool">
+        <label for="video-url">VIDEO LINK</label>
+        <form id="url-form">
+          <span class="link-icon">↗</span>
+          <input id="video-url" type="url" placeholder="Paste a YouTube video URL..." autocomplete="url" required>
+          <button id="submit-button" type="submit">Preview <span>→</span></button>
+        </form>
+        <div class="panel-foot"><span>◎ HTTPS links only</span><span>For content you have permission to use</span></div>
+      </section>
+
+      <div id="result" class="result-card" aria-live="polite" hidden></div>
+      <div class="trust-row"><span>✦ Clean interface</span><span>✦ Mobile ready</span><span>✦ Simple workflow</span></div>
+    </section>
+
+    <section class="feature-section" id="about">
+      <div class="section-heading"><div><span class="section-kicker">MADE FOR CREATORS</span><h2>Everything starts<br>with a link.</h2></div><p>Keep your workflow clear and focused.<br>Paste a link to see available video details.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon green">♫</div><span class="card-number">01 / AUDIO</span><h3>Audio workflows</h3><p>Build around audio you own or are authorized to use.</p><span class="card-arrow">↗</span></article>
+        <article class="feature-card"><div class="feature-icon violet">▶</div><span class="card-number">02 / VIDEO</span><h3>Video details</h3><p>Preview a video's title, channel, thumbnail and duration.</p><span class="card-arrow">↗</span></article>
+        <article class="feature-card"><div class="feature-icon blue">⌁</div><span class="card-number">03 / SIMPLE</span><h3>Less clutter</h3><p>A responsive layout designed for desktop and mobile screens.</p><span class="card-arrow">↗</span></article>
+      </div>
+    </section>
+
+    <section class="notice"><span class="notice-icon">i</span><p><strong>Respect creators.</strong> Use media only when you own it or have permission. This starter previews metadata; it does not download or convert videos.</p></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="/"><span class="brand-mark">N</span><span>NEX<span class="brand-light">MUSIC</span></span></a><span>Made for your media workflow.</span><span>© <span id="year"></span> Nex Music</span></footer>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
